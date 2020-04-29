@@ -1,0 +1,703 @@
+
+body{
+	font-family: "Orbitron", sans-serif;
+}
+
+div {
+	box-sizing: border-box;
+}
+
+header{
+	background: url(img/k.jpg) no-repeat center top/ cover;
+	padding-top:10px;
+    background-size: 970px;
+}
+.container {
+	max-width:900px;
+	margin-left: auto;
+	margin-right: auto; 
+}
+.wrapper{
+	width:100%;
+	background: #3385ff;
+	color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	/*box-shadow: 0px 30px 30px 20px rgba(51, 51, 255) ;*/
+	z-index: 100;
+	
+}
+
+
+.flex{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	justify-content: space-around;
+
+}
+.nav *{
+	margin: 0;
+	padding: 0;
+
+}
+.nav ul,
+.nav ol{
+	list-style: none;
+}
+.nav >ul{
+	display: flex;
+	justify-content: center;
+}
+.nav > ul li a{
+	display: block;
+	background:/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cedbe9+0,aac5de+17,6199c7+50,3a84c3+51,419ad6+59,4bb8f0+71,3a8bc2+84,26558b+100;Blue+Gloss */
+background: rgb(206,219,233); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(206,219,233,1) 0%, rgba(170,197,222,1) 17%, rgba(97,153,199,1) 50%, rgba(58,132,195,1) 51%, rgba(65,154,214,1) 59%, rgba(75,184,240,1) 71%, rgba(58,139,194,1) 84%, rgba(38,85,139,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(206,219,233,1) 0%,rgba(170,197,222,1) 17%,rgba(97,153,199,1) 50%,rgba(58,132,195,1) 51%,rgba(65,154,214,1) 59%,rgba(75,184,240,1) 71%,rgba(58,139,194,1) 84%,rgba(38,85,139,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(206,219,233,1) 0%,rgba(170,197,222,1) 17%,rgba(97,153,199,1) 50%,rgba(58,132,195,1) 51%,rgba(65,154,214,1) 59%,rgba(75,184,240,1) 71%,rgba(58,139,194,1) 84%,rgba(38,85,139,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedbe9', endColorstr='#26558b',GradientType=0 ); /* IE6-9 */
+ ;
+	padding: 15px 30px 15px 40px;
+	font-size: 15px;
+	color: #454547;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all 0.3s ease;
+}
+.nav > ul li:first-child{
+	border-left: 1px solid #b2b3b5;
+}
+.nav >ul li:last-child{
+	border-right: 1px solid #babbbb;
+}
+.nav li a:hover{
+	background: #3385ff;
+	color: #ffffff;
+	box-shadow: 1px 5px 10px -5px black;
+	transition: all 0.3s ease;
+}
+/*sub меню*/
+.nav li ul{
+	position: absolute;
+	min-width: 150px;
+	display: none;
+}
+.nav li > ul li {
+	border: 1px solid #c7c8ca;
+}
+.nav li > ul li a {
+	padding: 10px;
+	text-transform: none;
+	background: /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#87e0fd+0,53cbf1+40,05abe0+100;Blue+3D+%23+16 */
+background: rgb(135,224,253); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(135,224,253,1) 0%, rgba(83,203,241,1) 40%, rgba(5,171,224,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(135,224,253,1) 0%,rgba(83,203,241,1) 40%,rgba(5,171,224,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(135,224,253,1) 0%,rgba(83,203,241,1) 40%,rgba(5,171,224,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=0 ); /* IE6-9 */
+
+}
+.nav li > ul li ul{
+	position: absolute;
+	right: -150px;
+	top:0;
+}
+.nav li:hover > ul{
+	display: block;
+}
+
+.titles{
+	text-transform: uppercase;
+	text-align: center; 
+	margin-top: 100px;
+   
+}
+.titles h1{
+	font-size:45px;
+    color: #ffffff;
+	text-transform: uppercase;
+	text-align: center; 
+	margin-top:600px;
+   
+}
+/*Слайдер*/
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+
+.slider {
+    margin-top: 29%;
+	max-width: 900px;
+	height: 500px;
+	overflow: hidden;
+	border: 10px solid #fff;
+}
+
+.middle {
+	position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.navigation {
+	position: absolute;
+	bottom: 16px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+
+}
+.bar {
+	height: 8px;
+	width: 30px;
+	margin: 6px;
+	cursor: pointer;
+	background-color: #ddd;
+	opacity:.7;
+	border-radius: 10px;
+	transition: all .4s ease;
+}
+.bar:hover {
+	opacity: 1s;
+	transform: scale(1.1);
+
+}
+input[name="r"]{
+position: absolute;
+visibility: hidden;
+}
+.slides{
+	width: 400%;
+	height: 100%;
+	display: flex;
+}
+.slide {
+	width: 25%;
+	transition: all .1s ease;
+	cursor: pointer;
+}
+.slide img {
+	width: 100%;
+	height: 100%;
+}
+#r1:checked ~.s1 {
+	margin-left: 0;
+}
+#r2:checked ~.s1 {
+	margin-left: -25%;
+}
+#r3:checked ~.s1 {
+	margin-left: -50%;
+}
+#r4:checked ~.s1 {
+	margin-left: -75%;
+}
+
+
+/*
+Окуу базасы*/
+
+#learn {
+	font-family: sans-serif;
+	font-size: 16px;
+	background: /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#eeeeee+0,eeeeee+100;Grey+Flat */
+background: rgb(238,238,238); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(238,238,238,1) 0%, rgba(238,238,238,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+;
+
+}
+#main{
+	max-width: 1100px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+
+}
+.main-title{
+	text-align: center;
+	color: #808B96;
+}
+
+.main-title h1{
+	margin-top: 80px;
+	font-size: 36px;
+	font-weight: 900;
+    letter-spacing: 2px;
+	text-transform: uppercase;
+	line-height: 1.3
+}
+.main-title p{
+	text-align: center;
+    font-family: Areal;
+    font-size: 20px;
+}
+.wrapper_main{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 400px;
+	margin-bottom: 50px;
+}
+.wrapper-box{
+	width: 280px;
+	height: 200px;
+	background-image: url("img/p.jpg");
+	background-size: cover;
+	background-position: center;
+	transition: 1s;
+	cursor: pointer;
+}
+
+.wrapper-box:hover{
+	/*transform: rotate(360deg);*/
+	transform: scale(1.2);
+}
+.wrapper-box1{
+	width: 280px;
+	height: 200px;
+	background-image: url("img/p1.jpg");
+	background-size: cover;
+	background-position: center;
+	transition: 1s;
+	cursor: pointer;
+}
+.wrapper-box1:hover{
+	transform: scale(1.2) ;
+}
+
+.wrapper-box2{
+	width: 280px;
+	height: 200px;
+	background-image: url("img/p2.jpg");
+	background-size: cover;
+	background-position: center;
+	transition: 1s;
+	cursor: pointer;
+}
+.wrapper-box2:hover{
+	transform: scale(1.2) ;
+}
+/*Новости*/
+hr {
+	border:1px solid #3385ff;
+
+ }
+ #new {
+ 	text-transform: uppercase;
+    text-align: center;
+ 	color: #3385ff;
+ 	font-size: 40px;
+ 	padding-bottom: 20px;
+ 	
+
+ }
+ #news{
+ 	padding-bottom: 20%;
+	padding-top: 620px;
+	width: 100%;
+	height: 100vh;
+	background-color
+    background-size:cover;
+
+}
+section .events{
+
+display: flex;
+width: 900px;
+margin-left: auto;
+margin-right: auto;
+padding-top: 30px; 
+}
+h3{
+	font-size: 20px;
+	color: #3385ff;
+	padding-left:80px;
+	
+
+}
+#meka {
+     width: 300px;
+	height: 250px;
+	transition: 1s;
+	cursor: pointer;
+   
+}
+#meka:hover {
+	opacity: 0.5;
+	background-color: #FF0000;
+}
+
+#pm{
+	font-size: 19px;
+	text-decoration: none;
+	color: #3385ff;
+	padding-left: 80px; 
+}
+#p :hover{
+	color: #E94231 ;
+}
+/*SADIK html*/
+.wrapper_main1{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 400px;
+	margin-bottom: 50px;
+	
+}
+.wrapper-b{
+	width: 350px;
+	height: 250px;
+	background-image: url("img/sad1.jpg");
+	background-size: cover;
+	background-position: center;
+	transition: 1s;
+	cursor: pointer;
+}
+/*.wrapper-b:hover{
+	transform: rotate(360deg);
+	transform: scale(1.2);
+}*/
+.wrapper-b1{
+	width: 350px;
+	height: 250px;
+	background-image: url("img/sad2.jpg");
+	background-size: cover;
+	background-position: center;
+	transition: 1s;
+	cursor: pointer;
+}
+
+.wrapper-b2{
+	width: 350px;
+	height: 250px;
+	background-image: url("img/sad3.jpg");
+	background-size: cover;
+	background-position: center;
+	transition: 1s;
+	cursor: pointer;
+}
+/*KARAVAN html*/
+
+hr {
+	border:1px solid #3385ff;
+
+ }
+ #new {
+ 	text-transform: uppercase;
+    text-align: center;
+ 	color: #3385ff;
+ 	font-size: 40px;
+ 	padding-bottom: 20px;
+ 	
+
+ }
+ #news{
+ 	padding-bottom: 20%;
+	padding-top: 620px;
+	width: 100%;
+	height: 100vh;
+	background-color
+    background-size:cover;
+
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+
+.slider {
+    margin-top: 29%;
+	max-width: 900px;
+	height: 500px;
+	overflow: hidden;
+	border: 10px solid #fff;
+}
+
+.middle {
+	position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.navigation {
+	position: absolute;
+	bottom: 16px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+
+}
+.bar {
+	height: 8px;
+	width: 30px;
+	margin: 6px;
+	cursor: pointer;
+	background-color: #ddd;
+	opacity:.7;
+	border-radius: 10px;
+	transition: all .4s ease;
+}
+.bar:hover {
+	opacity: 1s;
+	transform: scale(1.1);
+
+}
+input[name="r"]{
+position: absolute;
+visibility: hidden;
+}
+.slides{
+	width: 400%;
+	height: 100%;
+	display: flex;
+}
+.slide {
+	width: 25%;
+	transition: all .1s ease;
+	cursor: pointer;
+}
+.slide img {
+	width: 100%;
+	height: 100%;
+}
+#r1:checked ~.s1 {
+	margin-left: 0;
+}
+#r2:checked ~.s1 {
+	margin-left: -25%;
+}
+#r3:checked ~.s1 {
+	margin-left: -50%;
+}
+#r4:checked ~.s1 {
+	margin-left: -75%;
+}
+/* #new {
+ 	text-transform: uppercase;
+ 	text-align: center;
+ 	color: #3385ff;
+ 	font-size: 40px;
+ 	padding-bottom: 20px;
+ }
+#news{
+	padding-top: 700px;
+	width: 100%;
+	height: 100vh;
+	background-color: #ccccff;
+    background-size:cover;
+}
+
+section .events{
+	position: relative;
+	width: 990px;
+	height: 100%;
+	background: rgba(0,0,0 .5);
+	margin-left: 300px;
+	box-sizing: border-box;
+}
+section .leftBox .content h1{
+	margin: 0;
+	padding-left: 0;
+	font-size: 50px;
+	color:#34495E ;
+	text-transform: uppercase;
+}
+section .leftBox .content p{
+	margin: 10px 0 0;
+	padding: 0;
+	color: #34495E; 
+	font-size: 20px;
+}
+
+section .events ul{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	margin: 0;
+	padding: 40px;
+	box-sizing: border-box;
+}
+section .events ul li{
+	list-style: none;
+	background: #fff;
+	box-sizing: border-box;
+	height: 200px;
+	/*margin: 15px 0;*/
+/*}
+section .events ul li .time{
+	position: relative;
+	padding: 20px;
+	background:#34495E;
+	box-sizing: border-box;
+	width: 30%;
+	height: 100%;
+    float: left;
+    text-align: center;
+    transition: 5s;
+}
+section .events ul li:hover .time h2{
+position:absolute;
+margin:0;
+padding:0;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+color:#fff;
+font-size:60px;
+line-height:30px;
+}
+section .events ul li:hover .time h2{
+	font-size: 30px;
+}
+section .events ul li .details h3{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	font-size: 22px;
+}
+section .events ul li .details p{
+	position: relative;
+	margin: 10px 0 0;
+	padding:0;
+	font-size: 16px;
+}
+section .events ul li .details a{
+	display:inline-block;
+	text-decoration:none;
+	text-transform:uppercase;
+	padding:10px 15px;
+	border:2px solid #262626;
+	margin: 10px;
+	font-size:18px;
+	transition:.5s;
+}
+section .events ul li .details a:hover{
+	background: #34495E ;
+	color: #fff;
+	border-color: #34495E;
+}
+*/ */
+/*кадр маселеси*/
+
+}
+#kadry{
+ 	text-transform: uppercase;
+ 	text-align: center;
+ 	color:#575757;
+ 	font-size: 40px;
+ 	padding-bottom: 20px;
+}
+ #kadr{
+ 	text-align: center;
+ 	padding-bottom: 240px;
+	padding-top: 100px;
+	width: 100%;
+	height: 100vh;
+	
+
+}
+h4{
+	color: #3385ff;
+	font-size: 18px;
+	text-align: left;
+	padding-left: 80px;
+}
+section .person{
+
+display: flex;
+width: 900px;
+margin-left: auto;
+margin-right: auto;
+padding-top: 30px;
+margin-top: 20px;
+}
+#meka {
+    
+    width: 300px;
+	height: 250px;
+	transition: 1s;
+
+}
+
+#p{
+	font-size: 18.5px;
+	text-decoration: none;
+	color: #575757;
+	padding-left: 80px; 
+	text-align: left;
+}
+
+/*Контакты*/
+
+
+/*footer*/
+#contact{
+
+	width: 100%;
+	height: 200px;
+	background-color: #808080;
+	margin-top:300px;
+
+}
+#con {
+	font-size: 20px;
+    font-family:  ;
+	color: #fff;
+	text-align: center;
+	text-align: left;
+
+}
+.footer{
+    display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 200px;
+}
+#cont{
+	width: 100%;
+	height: 100px;
+	background-color:#3385ff; 
+}
+
+#item {
+	font-size: 20px;
+    font-family:  ;
+	color: #fff;
+	text-align: center;
+}
+.footer_2{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 100px;
+	
+}
